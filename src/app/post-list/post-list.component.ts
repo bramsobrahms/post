@@ -9,7 +9,7 @@ export class PostListComponent implements OnInit {
  
   @Input() postTitle: String;
   @Input() postContent: String;
-  @Input() postLoveIts: Number;
+  @Input() postLoveIts: number;
   @Input() postDateCreate: Date;
 
   constructor() { }
@@ -17,10 +17,12 @@ export class PostListComponent implements OnInit {
   ngOnInit() {
   }
   onLove(){
+    this.postLoveIts++;
     console.log('Add a love')
   }
 
   onDontLove(){
+    this.postLoveIts--;
     console.log('Remove a love')
     }
 }
